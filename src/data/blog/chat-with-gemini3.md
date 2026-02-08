@@ -12,7 +12,7 @@ tags:
 description: chat with gemini3 2/8/2026.
 ---
 
-AstroPaper is a highly customizable Astro blog theme. With AstroPaper, you can customize everything according to your personal taste. This article will explain how you can make some customizations easily in the config file.
+最近在花大量的时间和Gemini3聊天
 
 ## Table of contents
 

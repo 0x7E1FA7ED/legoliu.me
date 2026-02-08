@@ -9,6 +9,7 @@ import Card from "@/components/Card.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
 import IconRss from "@/assets/icons/IconRss.svg";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
+import avatarImage from "@/assets/images/lego-avatar.jpg";
 import { SITE } from "@/config";
 import { SOCIALS } from "@/constants";
 
@@ -23,25 +24,37 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
   <Header />
   <main id="main-content" data-layout="index" class="app-layout">
     <section id="hero" class:list={["pt-8 pb-6", "border-b border-border"]}>
-      <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-        Hi，I‘m @lego.
-      </h1>
-      <a
-        target="_blank"
-        href="/rss.xml"
-        class="inline-block"
-        aria-label="rss feed"
-        title="RSS Feed"
-      >
-        <IconRss
-          width={20}
-          height={20}
-          class="scale-125 stroke-accent stroke-3 rtl:-rotate-90"
+      <div class="flex items-center gap-6">
+        <img
+          src={avatarImage.src}
+          alt="Lego Avatar"
+          class="h-32 w-32 rounded-full object-cover sm:h-40 sm:w-40"
+          style="object-position: center calc(50% + 20px)"
         />
-        <span class="sr-only">RSS Feed</span>
-      </a>
+        <div class="flex-1">
+          <div class="flex items-baseline gap-4">
+            <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
+              Hi，I'm @lego.
+            </h1>
+            <a
+              target="_blank"
+              href="/rss.xml"
+              class="inline-block"
+              aria-label="rss feed"
+              title="RSS Feed"
+            >
+              <IconRss
+                width={20}
+                height={20}
+                class="scale-125 stroke-accent stroke-3 rtl:-rotate-90"
+              />
+              <span class="sr-only">RSS Feed</span>
+            </a>
+          </div>
+        </div>
+      </div>
 
-      <p>
+      <p class="mt-6">
         I like drinking water especially when I was really thirsty.
       </p>
       <p class="mt-2">
@@ -73,7 +86,6 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
             { "border-b border-border": recentPosts.length > 0 },
           ]}
         >
-          <h2 class="text-2xl font-semibold tracking-wide">Featured</h2>
           <ul>
             {featuredPosts.map(data => (
               <Card variant="h3" {...data} />
