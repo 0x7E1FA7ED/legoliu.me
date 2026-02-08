@@ -12,8 +12,6 @@ tags:
 description: chat with gemini3 2/8/2026.
 ---
 
-最近在花大量的时间和Gemini3聊天
-
 ## Table of contents
 
 ## Configuring SITE

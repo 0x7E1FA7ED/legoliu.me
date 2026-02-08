@@ -14,7 +14,7 @@ import wechatImage from "@/assets/images/lego-wechat.jpg";
           title={social.linkTitle}
           onclick="event.preventDefault(); document.getElementById('wechat-modal').classList.remove('hidden')"
         >
-          <social.icon class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" />
+          <social.icon class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent dark:stroke-white sm:scale-110" />
           <span class="sr-only">{social.linkTitle}</span>
           <div class="pointer-events-none absolute left-0 -top-44 hidden w-40 rounded shadow-lg bg-white p-1 dark:bg-gray-900 group-hover:block">
             <img src={wechatImage.src} alt="WeChat preview" class="w-full h-auto rounded" />
